@@ -69,13 +69,7 @@ drawnSketch = "";
 answerHolder = "";
 score = 0;
 
-function updateCanvas() {
-  background("white");
-  randomNumber = Math.floor((Math.random() * quickDrawDataset.length) + 1);
-  console.log(quickDrawDataset[randomNumber]);
-  sketch = quickDrawDataset[randomNumber];
-  document.getElementById('sketchName').innerHTML = 'Esboço a ser desenhado: ' + sketch;
-}
+//function updatecanvs
 
 function preload() {
   classifier = ml5.imageClassifier('DoodleNet');
@@ -89,15 +83,7 @@ function setup() {
 }
 
 
-function draw() {
-  //definir peso do traço como 10
-  strokeWeight(13);
-  //definir cor do traço como preta
-  stroke(0);
-  //Se o mouse for pressionado, desenhe uma linha entre as posições anterior e atual do mouse
-  if (mouseIsPressed) {
-    line(pmouseX, pmouseY, mouseX, mouseY);
-  }
+//fuction draw
 
   checkSketch()
   if(drawnSketch == sketch)
